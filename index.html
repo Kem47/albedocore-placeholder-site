@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlbedoCore</title>
+  <meta name="description" content="AlbedoCore Ltd — independent software company. Makers of HyperLector, a modern screenreader for games and general use.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f7f5f0'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='%23141414' stroke-width='3'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --fg: #141414;
+      --muted: #6d6b65;
+      --rule: #d9d5ca;
+      --measure: 38rem;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Fraunces", Georgia, "Times New Roman", serif;
+      font-variation-settings: "opsz" 14;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--measure);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header.site {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .wordmark {
+      font-variation-settings: "opsz" 30, "SOFT" 30;
+      font-weight: 500;
+      font-size: 1.05rem;
+      letter-spacing: 0.005em;
+      margin: 0;
+    }
+
+    /* Main */
+    main {
+      flex: 1 0 auto;
+      padding: 4.5rem 0 3rem;
+    }
+
+    h1 {
+      font-variation-settings: "opsz" 120, "SOFT" 50;
+      font-weight: 300;
+      font-size: clamp(2.15rem, 5vw, 2.85rem);
+      line-height: 1.1;
+      letter-spacing: -0.018em;
+      margin: 0 0 0.4rem;
+    }
+
+    .lede {
+      color: var(--muted);
+      font-size: 1.05rem;
+      font-style: italic;
+      font-variation-settings: "opsz" 20;
+      margin: 0 0 3.25rem;
+    }
+
+    h2 {
+      font-variation-settings: "opsz" 16;
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin: 2.75rem 0 0.85rem;
+    }
+
+    p {
+      margin: 0 0 1.1rem;
+      max-width: 34rem;
+    }
+
+    p.product-line strong {
+      font-weight: 500;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--rule);
+      transition: text-decoration-color 140ms ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration-color: var(--fg);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--fg);
+      outline-offset: 3px;
+      border-radius: 1px;
+    }
+
+    address.office {
+      font-style: normal;
+      line-height: 1.55;
+    }
+    address.office span { display: block; }
+
+    /* Footer */
+    footer.site {
+      border-top: 1px solid var(--rule);
+      padding: 1.75rem 0;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer.site .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem 2rem;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    footer.site nav {
+      display: flex;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 520px) {
+      main { padding-top: 3rem; }
+      h2 { margin-top: 2.25rem; }
+      footer.site { margin-top: 2rem; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12120f;
+        --fg: #eeece6;
+        --muted: #8d8a83;
+        --rule: #2b2a25;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <div class="container">
+      <p class="wordmark">AlbedoCore</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>AlbedoCore&nbsp;Ltd</h1>
+      <p class="lede">Independent software company, United Kingdom.</p>
+
+      <h2>Product</h2>
+      <p class="product-line"><strong>HyperLector</strong> is a modern screenreader application for games and general desktop use.</p>
+      <p>HyperLector is currently in pre-release development. Further information will be published ahead of general availability.</p>
+
+      <h2>Contact</h2>
+      <!-- TODO: replace with your real contact address before going live -->
+      <p>General enquiries: <a href="mailto:kemal@albedocore.com">kemal@albedocore.com</a></p>
+
+      <h2>Registered Office</h2>
+      <!-- TODO: replace bracketed lines with the registered office address filed at Companies House -->
+      <address class="office">
+        <span>AlbedoCore Ltd</span>
+        <span>71-75 Shelton Street</span>
+        <span>Covent Garden</span>
+        <span>London, WC2H 9JQ</span>
+        <span>United Kingdom</span>
+      </address>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <div>&copy; 2026 AlbedoCore Ltd. All rights reserved.</div>
+      <nav aria-label="Legal">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
